@@ -1,0 +1,94 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 130vh;
+    padding: 30px 50px;
+}
+
+.about-container h1 {
+    margin: 15px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.about-container hr {
+    width: 200px;
+    height: 1px;
+    background-color: rgb(92, 90, 90);
+    border: none;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 500;
+    overflow: visible;
+}
+
+.about-container .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.about-container .about .left {
+    width: 40%;
+}
+
+.about-container .about .left img {
+    width: 100%;
+}
+
+.about-container .about .right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 50%;
+    gap: 20px;
+}
+
+.about-container .about .right h3 {
+    color: grey;
+    font-size: 20px;
+}
+
+.about-container .about .right h2 {
+    font-size: 50px;
+    font-weight: 800;
+    width: 100%;
+    line-height: 45px;
+}
+
+.about-container .about .right p {
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 3px solid blue;
+}
+
+.about-container .about .right .stats {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.about-container .about .right .stats div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 125px;
+    height: 125px;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.about-container .about .right .stats div span {
+    font-weight: 500;
+}
