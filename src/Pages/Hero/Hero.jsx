@@ -9,8 +9,7 @@ const Hero = () => {
             <h3>Welcome to Bacteriophage</h3>
             <h1>Make Your Research Easier and Faster</h1>
 
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quisquam, </p>
-            <p>eos provident et explicabo ab molestias modi recusandae</p>
+            <p>Accelerate your research with a single platform that fetches genomes, predicts virulence and resistance, and profiles phages—no bioinformatics expertise required.</p>
 
             <button><a href="#about">Learn More</a></button>
         </div>

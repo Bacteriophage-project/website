@@ -6,8 +6,10 @@
     width: 100%;
     height: 120vh;
     padding: 50px 40px;
-    background-color: rgba(0, 119, 182, 0.6);
-    color: black;
+    background-image: url('../../Assets/services_back.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
 .services-container hr {

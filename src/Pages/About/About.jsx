@@ -17,7 +17,7 @@ const About = () => {
             <div className="right">
                 <h3>About Us</h3>
                 <h2>The shortcut to faster and better research just a few clicks away</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis facere ad sint obcaecati ipsa mollitia, doloremque saepe harum facilis consequatur nam dolor eius autem! Quas consequuntur beatae quidem labore.</p>
+                <p>We are a team of researchers and developers dedicated to simplifying bacteriophage and AMR research. By integrating tools like NCBI, ResFinder, VFDB, and PHASTEST into one easy-to-use platform, we help scientists move from raw data to meaningful insights faster than ever.</p>
 
                 <div className="stats">
                     <div><span>4+</span>Integrated websites</div>
