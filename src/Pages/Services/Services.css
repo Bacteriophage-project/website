@@ -4,12 +4,20 @@
     align-items: start;
     justify-content: center;
     width: 100%;
-    height: 120vh;
+    height: 130vh;
     padding: 50px 40px;
-    background-image: url('../../Assets/services_back.jpeg');
+    background-image: url('../../Assets/services.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+}
+
+.services-container h1 {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-left: 40px;
+  margin-bottom: 10px;
 }
 
 .services-container hr {
@@ -37,12 +45,19 @@
 }
 
 .service {
-  background-color: #fff;
+  background-blend-mode: soft-light;
+  backdrop-filter: blur(15px);
+  color: white;
+  border: 0.1px solid white;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
 }
 
 .service:hover {
@@ -59,11 +74,9 @@
 .service h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #333;
 }
 
 .service p {
   font-size: 14px;
-  color: #666;
   line-height: 1.6;
 }

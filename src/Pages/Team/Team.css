@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 180vh;
+    height: 190vh;
     color: white;
     overflow: hidden;
     z-index: 0;
@@ -20,10 +20,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: blur(8px);
+    filter: blur(2px);
     z-index: -1;
 }
-
 
 .team-container h2 {
     font-size: 20px;

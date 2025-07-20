@@ -1,157 +1,83 @@
-import React from 'react'
-import './Team.css'
-import cyan from '../../profiles/Cyan.jpg'
-import dan from '../../profiles/Daniel.jpg'
-import kalii from '../../profiles/Kalii.jpg'
-import cynthia from '../../profiles/Cynthia.jpg'
-import nesh from '../../profiles/Nesh.jpg'
-import abidha from '../../profiles/Abidha.jpg'
-import dekow from '../../profiles/Dekow.jpg'
-import placeholder from '../../Assets/logo.png'
+import React, { useEffect, useRef } from 'react';
+import './Team.css';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import cyan from '../../profiles/Cyan.jpg';
+import dan from '../../profiles/Daniel.jpg';
+import kalii from '../../profiles/Kalii.jpg';
+import cynthia from '../../profiles/Cynthia.jpg';
+import nesh from '../../profiles/Nesh.jpg';
+import abidha from '../../profiles/Abidha.jpg';
+import dekow from '../../profiles/Dekow.jpg';
+import placeholder from '../../Assets/logo.png';
+import nderu from '../../profiles/Nderu.png';
+import victor from '../../profiles/Victor.jpg'
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Team = () => {
+  const teamRef = useRef(null);
+
+  useEffect(() => {
+    const context = gsap.context(() => {
+      const members = gsap.utils.toArray('.member');
+
+      gsap.from(members, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: teamRef.current,
+          start: 'top 95%',
+          toggleActions: 'play none none none',
+        },
+      });
+
+      ScrollTrigger.refresh();
+    }, teamRef);
+
+    return () => context.revert();
+  }, []);
+
   return (
-    <>
-    <div className="team-container" id='team'>
-        <h2>Our Team</h2>
-        <h1>Our Dedicated Team Members</h1>
-        <hr />
+    <div className="team-container" id="team" ref={teamRef}>
+      <h2>Our Team</h2>
+      <h1>Our Dedicated Team Members</h1>
+      <hr />
 
-        <div className="members">
-            <div className="member">
-                <div className="member-image">
-                    <img src={placeholder} alt="" />
-                    <div className="hover">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
+      <div className="members">
+        {[
+          { img: nderu, name: 'Dr Lawrence Nderu', role: 'Chairman Computing' },
+          { img: cyan, name: 'Dr Julia Cyan', role: 'Research Consultant' },
+          { img: cynthia, name: 'Cynthia Vaati', role: 'Project Lead' },
+          { img: dan, name: 'Daniel Bundi', role: 'Frontend Engineer' },
+          { img: dekow, name: 'Mohamed Dekow', role: 'Cyber-Security Engineer' },
+          { img: nesh, name: 'Josphat Munene', role: 'Backend Engineer' },
+          { img: kalii, name: 'Emmanuel Kalii', role: 'Data Analyst' },
+          { img: abidha, name: 'Kelvin Abidha', role: 'Backend Engineer' },
+          { img: victor, name: 'Victor Nduati', role: 'Backend Engineer' },
+        ].map((member, index) => (
+          <div className="member" key={index}>
+            <div className="member-image">
+              <img src={member.img} alt={member.name} />
+              <div className="hover">
+                <div className="social-icons">
+                  <a href="#"><i className="fab fa-twitter"></i></a>
+                  <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i className="fab fa-github"></i></a>
                 </div>
-                <h5>Dr Lawrence Nderu</h5>
-                <p>Chairman Computing</p>
+              </div>
             </div>
-
-            <div className="member">
-                <div className="member-image">
-                    <img src={cyan} alt="" />
-                    <div className="hover">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <h5>Dr Julia Cyan</h5>
-                <p>Research Consultant</p>
-            </div>
-
-            <div className="member">
-                <div className="member-image">
-                    <img src={dan} alt="" />
-                    <div className="hover">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <h5>Daniel</h5>
-                <p>Frontend Engineer</p>
-            </div>
-            <div className="member">
-                <div className="member-image">
-                    <img src={dekow} alt="" />
-                    <div className="hover">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <h5>Mohamed Dekow</h5>
-                <p>Cyber-Security Engineer</p>
-            </div>
-            <div className="member">
-                <div className="member-image">
-                    <img src={nesh} alt="" />
-                    <div className="hover">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <h5>Josphat Munene</h5>
-                <p>Artificial Intelligence</p>
-            </div>
-            <div className="member">
-                <div className="member-image">
-                    <img src={kalii} alt="" />
-                    <div className="hover">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <h5>Emmanuel Kalii</h5>
-                <p>Data Analyst</p>
-            </div>
-            
-            <div className="member">
-                <div className="member-image">
-                    <img src={cynthia} alt="" />
-                    <div className="hover">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <h5>Cynthia Vaati</h5>
-                <p>Project Lead</p>
-            </div>
-            <div className="member">
-                <div className="member-image">
-                    <img src={abidha} alt="" />
-                    <div className="hover">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <h5>Kelvin Abidha</h5>
-                <p>Machine Learning</p>
-            </div>
-            
-            <div className="member">
-                <div className="member-image">
-                    <img src={placeholder} alt="" />
-                    <div className="hover">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <h5>Victor Nduati</h5>
-                <p>Data Analyst</p>
-            </div>
-        </div>
+            <h5>{member.name}</h5>
+            <p>{member.role}</p>
+          </div>
+        ))}
+      </div>
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Team
+export default Team;

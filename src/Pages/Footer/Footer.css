@@ -83,6 +83,21 @@
   width: 100%;
 }
 
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact a {
+  margin-top: 5px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+  scale: 1.1;
+}
+
 .footer-contact p {
   margin: 5px 0;
   color: #ccc;
