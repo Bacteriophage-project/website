@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import cyan from '../../profiles/Cyan.jpg';
 import dan from '../../profiles/Daniel.jpg';
-import kalii from '../../profiles/Kalii.jpg';
+import kalii from '../../profiles/kali2.jpg';
 import cynthia from '../../profiles/Cynthia.jpg';
 import nesh from '../../profiles/Nesh.jpg';
 import abidha from '../../profiles/Abidha.jpg';

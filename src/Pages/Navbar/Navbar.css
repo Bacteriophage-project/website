@@ -50,6 +50,31 @@
 .navbar-right {
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.phage-left-wrapper {
+  position: absolute;
+  top: 15px;
+  left: -115px;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  z-index: 2;
+  pointer-events: none; 
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  width: 250px !important;
+  height: 250px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible;
 }
 
 .get-started-btn {

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './Navbar.css';
 import logo from '../../Assets/logo.png';
 import gsap from 'gsap';
+import PhageHover from './PhageHover';
 
 const Navbar = () => {
   const navbarRef = useRef(null);
@@ -56,6 +57,7 @@ const Navbar = () => {
         </ul>
 
         <div className="navbar-right">
+          <PhageHover/>
           <a href="#get-started" className="get-started-btn">Get Started</a>
         </div>
       </nav>
