@@ -9,6 +9,7 @@ import Footer from './Pages/Footer/Footer';
 import Services from './Pages/Services/Services';
 import Navbar from './Pages/Navbar/Navbar';
 import Mission from './Pages/Mission/Mission'
+import QABot from './QABot';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Mission/>
       <Team/>
       <Footer/>
+      <QABot/>
     </div>
   );
 }
