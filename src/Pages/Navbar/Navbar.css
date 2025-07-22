@@ -90,3 +90,74 @@ canvas {
 .get-started-btn:hover {
   background: #00cc4a;
 }
+
+/* -- Media Queries -- */
+@media (max-width: 479px) {
+  .navbar {
+    width: 100vw;
+    padding-left: 20px;
+  }
+
+  .navbar-left {
+    gap: 3px;
+    flex-direction: column;
+  }
+
+  .navbar-left .navbar-logo-text {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .navbar-links {
+    gap: 5px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+  }
+
+  .get-started-btn {
+    padding: 4px 8px;
+    font-size: 7px;
+  }
+
+  .phage-left-wrapper {
+    top: 40px;
+    left: -135px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 650px) {
+  .navbar-left .navbar-logo-text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .navbar-links {
+    gap: 6px;
+  }
+
+  .navbar-links li a {
+    font-size: 14px;
+  }
+
+  .get-started-btn {
+    padding: 6px 11px;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 767px) {
+  .navbar-links {
+    gap: 10px;
+  }
+
+  .navbar-left .navbar-logo-text {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .get-started-btn {
+    padding: 7px 13px;
+    font-size: 13px;
+  }
+}

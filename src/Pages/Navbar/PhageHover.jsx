@@ -33,7 +33,6 @@ const PhageHover = () => {
         <ambientLight intensity={1.2} />
         <directionalLight position={[2, 2, 2]} intensity={0.8} />
         <directionalLight position={[-2, -2, -2]} intensity={0.5} />
-        <OrbitControls enablePan enableRotate />
         <Suspense fallback={null}>
           <AnimatedPhage modelPath="/models/phage.glb" />
         </Suspense>

@@ -10,7 +10,7 @@
 
 .mission-container hr {
     width: 0.5px;
-    height: 100px;
+    height: 100px !important;
 }
 
 .mission-container .left,
@@ -96,4 +96,43 @@
 .mission-container .left .left-text p,
 .mission-container .right .right-text p {
     margin-top: 20px;
+}
+
+@media (max-width: 479px) {
+  .mission-container {
+    flex-direction: column;
+    height: auto;
+    padding: 25px 25px;
+  }
+
+  .mission-container .left,
+  .mission-container .right {
+    width: 85%;
+  }
+
+  .mission-container h1 {
+    font-size: 50px !important;
+  }
+
+  .mission-container h2 {
+    top: 15% !important;
+  }
+
+  .mission-container p {
+    font-weight: 200;
+    margin-top: 35px !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .mission-container {
+    flex-direction: column;
+    height: auto;
+    padding: 25px 25px;
+  }
+
+  .mission-container .left,
+  .mission-container .right {
+    width: 85%;
+  }
 }

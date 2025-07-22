@@ -50,24 +50,87 @@ const Team = () => {
 
       <div className="members">
         {[
-          { img: nderu, name: 'Dr Lawrence Nderu', role: 'Chairman Computing' },
-          { img: cyan, name: 'Dr Julia Cyan', role: 'Research Consultant' },
-          { img: cynthia, name: 'Cynthia Vaati', role: 'Project Lead' },
-          { img: dan, name: 'Daniel Bundi', role: 'Frontend Engineer' },
-          { img: dekow, name: 'Mohamed Dekow', role: 'Cyber-Security Engineer' },
-          { img: nesh, name: 'Josphat Munene', role: 'Backend Engineer' },
-          { img: kalii, name: 'Emmanuel Kalii', role: 'Data Analyst' },
-          { img: abidha, name: 'Kelvin Abidha', role: 'Backend Engineer' },
-          { img: victor, name: 'Victor Nduati', role: 'Backend Engineer' },
+          { 
+            img: nderu, 
+            name: 'Dr Lawrence Nderu', 
+            role: 'Chairman Computing',
+            github: '',
+            linkedin: '',
+            x: '' 
+          },
+          { 
+            img: cyan, 
+            name: 'Dr Julia Cyan', 
+            role: 'Research Consultant',
+            github: '',
+            linkedin: '',
+            x: ''  
+          },
+          { 
+            img: cynthia, 
+            name: 'Cynthia Vaati', 
+            role: 'Project Lead',
+            github: 'https://github.com/CynthiaVaati',
+            linkedin: 'https://www.linkedin.com/in/cynthia-vaati-a652922b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            x: ''  
+          },
+          { 
+            img: dan, 
+            name: 'Daniel Bundi', 
+            role: 'Frontend Engineer',
+            github: 'https://github.com/danbundi',
+            linkedin: 'https://www.linkedin.com/in/dan-bundi-1ekd4/',
+            x: ''  
+          },
+          { 
+            img: dekow, 
+            name: 'Mohamed Dekow', 
+            role: 'Cyber-Security Engineer',
+            github: '',
+            linkedin: '',
+            x: ''  
+          },
+          { 
+            img: nesh, 
+            name: 'Josphat Munene', 
+            role: 'Backend Engineer',
+            github: '',
+            linkedin: 'https://www.linkedin.com/in/josphat-munene?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            x: 'https://x.com/neshjos?t=HBX89iO3Ptgs8RHZ130SFA&s=09'  
+          },
+          { 
+            img: kalii, 
+            name: 'Emmanuel Kalii', 
+            role: 'Data Analyst',
+            github: '',
+            linkedin: 'https://www.linkedin.com/in/emmanuel-kalii-19081a368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+            x: ''  
+          },
+          { 
+            img: abidha, 
+            name: 'Kelvin Abidha', 
+            role: 'Backend Engineer',
+            github: 'https://github.com/KelvinAbidha',
+            linkedin: 'https://ke.linkedin.com/in/kelvinabidha',
+            x: ''  
+          },
+          { 
+            img: victor, 
+            name: 'Victor Nduati', 
+            role: 'Backend Engineer',
+            github: '',
+            linkedin: '',
+            x: ''  
+          },
         ].map((member, index) => (
           <div className="member" key={index}>
             <div className="member-image">
               <img src={member.img} alt={member.name} />
               <div className="hover">
                 <div className="social-icons">
-                  <a href="#"><i className="fab fa-twitter"></i></a>
-                  <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                  <a href="#"><i className="fab fa-github"></i></a>
+                  <a href={member.x} target='_blank'><i className="fab fa-twitter"></i></a>
+                  <a href={member.linkedin} target='_blank'><i className="fab fa-linkedin-in"></i></a>
+                  <a href={member.github} target='_blank'><i className="fab fa-github"></i></a>
                 </div>
               </div>
             </div>
