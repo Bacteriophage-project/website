@@ -62,9 +62,8 @@ const Team = () => {
             img: cyan, 
             name: 'Dr Julia Cyan', 
             role: 'Research Consultant',
-            github: '',
-            linkedin: '',
-            x: ''  
+            linkedin: 'https://www.linkedin.com/in/dr-juliah-khayeli-a-788446215/?originalSubdomain=ke',
+            scholar: 'https://scholar.google.com/citations?user=9ql0bpUAAAAJ&hl=en'  
           },
           { 
             img: cynthia, 
@@ -86,8 +85,8 @@ const Team = () => {
             img: dekow, 
             name: 'Mohamed Dekow', 
             role: 'Cyber-Security Engineer',
-            github: '',
-            linkedin: '',
+            github: 'https://github.com/d3q0w',
+            linkedin: 'https://www.linkedin.com/in/dekow-mohamed-56b2b3286/',
             x: ''  
           },
           { 
@@ -118,7 +117,7 @@ const Team = () => {
             img: victor, 
             name: 'Victor Nduati', 
             role: 'Backend Engineer',
-            github: '',
+            github: 'https://github.com/ShinigamiKing562',
             linkedin: '',
             x: ''  
           },
@@ -128,9 +127,13 @@ const Team = () => {
               <img src={member.img} alt={member.name} />
               <div className="hover">
                 <div className="social-icons">
-                  <a href={member.x} target='_blank'><i className="fab fa-twitter"></i></a>
-                  <a href={member.linkedin} target='_blank'><i className="fab fa-linkedin-in"></i></a>
-                  <a href={member.github} target='_blank'><i className="fab fa-github"></i></a>
+                  { 
+                    member.img !== dan && member.img !== cyan ? <a href={member.x} target='_blank' rel="noopener noreferrer"><i className="fab fa-twitter"></i></a> : null
+                  }
+                  <a href={member.linkedin} target='_blank' rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+                  {
+                    member.img === cyan ? <a href={member.scholar} target='_blank' rel="noopener noreferrer"><i className="fas fa-graduation-cap"></i></a> : <a href={member.github} target='_blank' rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+                  }
                 </div>
               </div>
             </div>
