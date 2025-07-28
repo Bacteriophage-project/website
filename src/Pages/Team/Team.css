@@ -109,7 +109,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 123, 255, 0.6);
+    background-color: rgba(0, 123, 255, 0.35);
     display: flex;
     justify-content: center;
     align-items: center;

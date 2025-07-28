@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import cyan from '../../profiles/Cyan.jpg';
 import dan from '../../profiles/Daniel.jpg';
-import kalii from '../../profiles/kali2.jpg';
+import kalii from '../../profiles/Kalii.jpg';
 import cynthia from '../../profiles/Cynthia.jpg';
 import nesh from '../../profiles/Nesh.jpg';
 import abidha from '../../profiles/Abidha.jpg';
@@ -101,7 +101,7 @@ const Team = () => {
             img: kalii, 
             name: 'Emmanuel Kalii', 
             role: 'Data Analyst',
-            github: '',
+            github: 'https://github.com/KALIIKARDZ',
             linkedin: 'https://www.linkedin.com/in/emmanuel-kalii-19081a368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
             x: ''  
           },
